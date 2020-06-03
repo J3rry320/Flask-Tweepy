@@ -1,12 +1,6 @@
-from .main import create_app
+from .main.controllers import search_users
 
-app = create_app('dev')
-
-
-@app.route('/')
-def hello():
-    return 'Hello From an amazing twitter API.'
-
+from .app import app
 
 if __name__ == '__main__':
     app.run()
